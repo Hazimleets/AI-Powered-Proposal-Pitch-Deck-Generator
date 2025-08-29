@@ -1,0 +1,24 @@
+<!--generator/templates/proposals/classic.html-->
+
+<!doctype html>
+<html><body>
+<h1 style="margin:0;">{{ company }} – Proposal</h1>
+<h3 style="color:#64748b;margin-top:4px;">Industry: {{ industry }}</h3>
+<hr>
+<h2>Executive Summary</h2>
+<p>{{ sections.executive_summary|linebreaksbr }}</p>
+<h2>Problem Statement</h2>
+<p>{{ sections.problem|linebreaksbr }}</p>
+<h2>Proposed Solution</h2>
+<p>{{ sections.solution|linebreaksbr }}</p>
+<h2>Target Market & Audience</h2>
+<p>{{ sections.market|linebreaksbr }}</p>
+<h2>Competitive Analysis</h2>
+<p>{{ sections.competition|linebreaksbr }}</p>
+<h2>Business Model & Pricing</h2>
+<p>{{ sections.business_model|linebreaksbr }}</p>
+<h2>Roadmap / Timeline</h2>
+<p>{{ sections.roadmap|linebreaksbr }}</p>
+<h2>Conclusion & Call-to-Action</h2>
+<p>{{ sections.cta|linebreaksbr }}</p>
+</body></html>

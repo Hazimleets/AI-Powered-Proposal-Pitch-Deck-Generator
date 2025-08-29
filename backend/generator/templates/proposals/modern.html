@@ -1,0 +1,21 @@
+<!--generator/templates/proposals/modern.html-->
+
+<!doctype html>
+<html><body style="font-family:Inter,Arial,sans-serif;">
+<div style="background:#111827;color:white;padding:16px 24px;border-radius:12px;">
+  <h1 style="margin:0;">{{ company }}</h1>
+  <div style="opacity:.8">Proposal • {{ industry }}</div>
+</div>
+<div style="height:12px"></div>
+<section style="padding:8px 0">
+  <h2 style="color:#111827">Executive Summary</h2>
+  <p>{{ sections.executive_summary|linebreaksbr }}</p>
+</section>
+<section><h2>Problem</h2><p>{{ sections.problem|linebreaksbr }}</p></section>
+<section><h2>Solution</h2><p>{{ sections.solution|linebreaksbr }}</p></section>
+<section><h2>Target Market</h2><p>{{ sections.market|linebreaksbr }}</p></section>
+<section><h2>Competitive Analysis</h2><p>{{ sections.competition|linebreaksbr }}</p></section>
+<section><h2>Business Model & Pricing</h2><p>{{ sections.business_model|linebreaksbr }}</p></section>
+<section><h2>Roadmap</h2><p>{{ sections.roadmap|linebreaksbr }}</p></section>
+<section><h2>Call to Action</h2><p>{{ sections.cta|linebreaksbr }}</p></section>
+</body></html>
