@@ -1,6 +1,6 @@
-//frontend/app/dashboard/create/page.tsx
-
+// frontend/app/dashboard/create/page.tsx
 'use client';
+
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
@@ -145,24 +145,28 @@ export default function Create() {
             onChange={(e) => setFormData({ ...formData, projectDescription: e.target.value })}
             className="mb-4"
           />
+
           <Input
             placeholder="Target Market"
             value={formData.targetMarket}
             onChange={(e) => setFormData({ ...formData, targetMarket: e.target.value })}
             className="mb-4"
           />
+
           <Input
             placeholder="Budget"
             value={formData.budget}
             onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
             className="mb-4"
           />
+
           <Input
             placeholder="Goals"
             value={formData.goals}
             onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
             className="mb-4"
           />
+
           <Input
             placeholder="Competitors (optional)"
             value={formData.competitors}
