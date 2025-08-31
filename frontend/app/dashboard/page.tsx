@@ -66,7 +66,7 @@ export default function Dashboard() {
         <Card>
           <CardHeader>Create Pitch Deck</CardHeader>
           <CardContent>
-            <Link href="/dashboard/create?type=pitch_deck">
+            <Link href="/dashboard/create?type=pitchdeck">
               <Button>New Pitch Deck</Button>
             </Link>
           </CardContent>
