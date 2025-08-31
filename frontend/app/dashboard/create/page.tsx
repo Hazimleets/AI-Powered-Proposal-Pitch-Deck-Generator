@@ -18,13 +18,13 @@ import {
   Textarea,
   Card,
   CardHeader,
-  CardContent
+  CardContent,
 } from '@/components/ui';
 
-export default function Create() {
+export default function CreatePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const documentType = searchParams.get('type') || 'proposal';
+  const documentType = searchParams.get('type') === 'pitchdeck' ? 'pitchdeck' : 'proposal';
 
   const [formData, setFormData] = useState({
     company: '',
@@ -70,7 +70,7 @@ export default function Create() {
       } else {
         setError(data.message || data.error || 'Generation failed');
       }
-    } catch (err) {
+    } catch {
       setError('An error occurred. Please try again.');
     } finally {
       setLoading(false);
@@ -126,7 +126,6 @@ export default function Create() {
           <Select
             value={formData.industry}
             onValueChange={(value) => setFormData({ ...formData, industry: value })}
-            defaultValue="technology"
           >
             <SelectTrigger className="mb-4">
               <SelectValue placeholder="Select industry" />
@@ -183,8 +182,10 @@ export default function Create() {
               <SelectValue placeholder="Select template" />
             </SelectTrigger>
             <SelectContent>
-              {(templates[documentType] || []).map((t) => (
-                <SelectItem key={t.id} value={t.id}>{t.name}</SelectItem>
+              {templates[documentType].map((t) => (
+                <SelectItem key={t.id} value={t.id}>
+                  {t.name}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
