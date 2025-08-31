@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
 import { saveAs } from 'file-saver';
+import { templates } from './templates';
+
 import {
   Button,
   Input,
@@ -18,18 +20,6 @@ import {
   CardHeader,
   CardContent
 } from '@/components/ui';
-
-// Ensure templates object has keys matching your document types
-export const templates: Record<string, { id: string; name: string }[]> = {
-  proposal: [
-    { id: 'classic', name: 'Classic' },
-    { id: 'modern', name: 'Modern' },
-  ],
-  pitchdeck: [
-    { id: 'classic', name: 'Classic' },
-    { id: 'modern', name: 'Modern' },
-  ],
-};
 
 export default function Create() {
   const router = useRouter();
