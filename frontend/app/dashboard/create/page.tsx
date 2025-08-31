@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Cookies from 'js-cookie';
 import { saveAs } from 'file-saver';
-import { templates } from '../templates';
+import { templates } from '@/lib/templates';
 
 import {
   Button,
